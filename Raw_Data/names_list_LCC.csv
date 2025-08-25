@@ -1,0 +1,470 @@
+﻿names.bigdf_familynames.,LCC
+Abies,coniferous woodland
+Acer,deciduous woodland
+Achillea,pasture
+Aconitum,NA
+Aconitum.lycoctonum,NA
+Adoxa.moschatellina,deciduous woodland
+Alchemilla,pasture
+Alisma,water
+Alisma.plantago.aquatica,water
+Alismataceae,water
+Allium,NA
+Alnus,wet woodland
+Alnus.glutinosa,wet woodland
+Alnus.incana,wet woodland
+Alnus.viridis,wet woodland
+Amaranthaceae,NA
+Anagallis.arvensis,NA
+Anagallis.tenella,NA
+Anemone,deciduous woodland
+Anemone.nemorosa,deciduous woodland
+Angelica,wet meadow
+Anthemis,pasture
+Apiaceae,pasture
+Arctium,arable
+Arctostaphylos,coniferous woodland
+Arctostaphylos.uva.ursi,coniferous woodland
+Arctous.alpina,heath
+Arenaria,pasture
+Armeria,pasture
+Armeria.Limonium,pasture
+Artemisia,arable
+Artemisia.norvegica,arable
+Asplenium,NA
+Aster,pasture
+Asteraceae,pasture
+Asteroideae,arable
+Astragalus.alpinus,NA
+Astragalus.frigidus,NA
+Astragalus.glycyphyllos,NA
+Astragalus.Oxytropis,NA
+Athyrium.alpestre,wet woodland
+Athyrium.filix.femina,wet woodland
+Avena.Triticum,arable
+Bassia.laniflora,NA
+Betula,deciduous woodland
+Betula.Corylus.Myrica,deciduous woodland
+Betula.fruticosa,deciduous woodland
+Betula.humilis,deciduous woodland
+Betula.nana,deciduous woodland
+Betula.pendula,deciduous woodland
+Betula.pubescens,deciduous woodland
+Bistorta,pasture
+Bistorta.officinalis,NA
+Bistorta.officinalis.B..vivipara,pasture
+Bistorta.vivipara,pasture
+Blechnum.spicant,wet woodland
+Boraginaceae,NA
+Botrychium,pasture
+Botrychium.lunaria,pasture
+Botryococcus,water
+Brassica,pasture
+Brassicaceae,pasture
+Bryales,NA
+Callitriche,water
+Calluna,heath
+Calluna.vulgaris,heath
+Caltha,wet meadow
+Caltha.palustris,wet meadow
+Calystegia,NA
+Campanula,pasture
+Campanulaceae,pasture
+Cannabaceae,arable
+Cannabis,arable
+Cannabis.sativa,arable
+Caprifoliaceae,pasture
+Capsella,arable
+Carex,wet meadow
+Carpinus,deciduous woodland
+Carpinus.betulus,deciduous woodland
+Carya,NA
+Caryophyllaceae,arable
+Cassiope,heath
+Centaurea.cyanus,arable
+Centaurea.jacea,pasture
+Centaurea.nigra,pasture
+Centaurea.scabiosa,pasture
+Cerastium,pasture
+Cerastium.cerastoides,NA
+Cerastium.fontanum,pasture
+Ceratophyllum,water
+Cerealia,arable
+Chamaenerion,NA
+Chrysosplenium,wet woodland
+Cichorieae,pasture
+Cichorioideae,pasture
+Cirsium,pasture
+Cirsium.Carduus,pasture
+Cladium.mariscus,wet meadow
+Convallaria,deciduous woodland
+Convallaria.majalis,deciduous woodland
+Cornus,deciduous woodland
+Cornus.mas.C..suecica,deciduous woodland
+Cornus.sanguinea,deciduous woodland
+Cornus.suecica,deciduous woodland
+Corylus,deciduous woodland
+Corylus.avellana,deciduous woodland
+Corylus.Myrica,deciduous woodland
+Cryptogramma,NA
+Cryptogramma.crispa,NA
+Cyperaceae,wet meadow
+Cyperaceae,wet meadow
+Cystopteris.fragilis,NA
+dataset_ID,NA
+Dianthus,pasture
+Diapensia,heath
+Diapensia.lapponica,heath
+Diphasiastrum,cliff
+Diphasiastrum.alpinum,cliff
+Diphasiastrum.alpinum.D..complanatum,cliff
+Diphasiastrum.complanatum,cliff
+Diphasiastrum.tristachyum,cliff
+Dipsacoideae,pasture
+Drosera,wet meadow
+Drosera.anglica,wet meadow
+Drosera.intermedia,wet meadow
+Drosera.rotundifolia,wet meadow
+Drosera.rotundifolia.D..anglica,wet meadow
+Droseraceae,wet meadow
+Dryas.octopetala,heath
+Dryopteris,NA
+Dryopteris.carthusiana,NA
+Dryopteris.dilatata,NA
+Dryopteris.filix.mas,NA
+Echium,ruderal
+Echium.vulgare,ruderal
+Elatine,water
+Empetrum,heath
+Empetrum.nigrum,heath
+Ephedra,NA
+Ephedra.distachya,NA
+Ephedra.fragilis,NA
+Epilobium,NA
+Equisetum,wet meadow
+Erica.arborea,heath
+Erica.cinerea.E..tetralix,heath
+Ericaceae,heath
+Ericales,heath
+Eriophorum,wet meadow
+Euphrasia,pasture
+Fabaceae,pasture
+Fagopyrum,arable
+Fagopyrum.esculentum,arable
+Fagus,deciduous woodland
+Fagus.sylvatica,deciduous woodland
+Filipendula,wet meadow
+Frangula,wet woodland
+Frangula.alnus,wet woodland
+Fraxinus,deciduous woodland
+Fraxinus.excelsior,deciduous woodland
+Galeopsis,arable
+Galium,pasture
+Gentiana,pasture
+Gentiana.campestris,pasture
+Gentiana.nivalis,pasture
+Gentiana.pneumonanthe,pasture
+Gentiana.purpurea,pasture
+Gentianaceae,pasture
+Gentianella.campestris,pasture
+Gentianella.detonsa,pasture
+Geraniaceae,pasture
+Geranium,pasture
+Geranium.sylvaticum,pasture
+Geum,pasture
+Geum.rivale,pasture
+Glaucium,water
+Glyceria,water
+Gnaphalium,ruderal
+Gymnocarpium,NA
+Gymnocarpium.dryopteris,NA
+Hedera,deciduous woodland
+Hedera.helix,deciduous woodland
+Helianthemum,pasture
+Heracleum,NA
+Hippophae,water
+Hippophae.rhamnoides,water
+Hippuris,water
+Hippuris.vulgaris,water
+Hordeum,arable
+Hottonia.palustris,water
+Humulus,arable
+Humulus.Cannabis,arable
+Humulus.lupulus,arable
+Huperzia,coniferous woodland
+Huperzia.selago,coniferous woodland
+Hydrocharis,water
+Hydrocotyle.vulgaris,NA
+Hypericum,pasture
+Hypericum.calycinum,pasture
+Hypericum.perforatum,pasture
+Hypericum.pulchrum,pasture
+Ilex,deciduous woodland
+Iris,water
+Isoetes,water
+Isoetes.echinospora,water
+Isoetes.lacustris,water
+Isoetes.setacea,water
+Jasione,heath
+Jasione.montana,heath
+Juglans,arable
+Juglans.regia,arable
+Juncaceae,wet meadow
+Juniperus,heath
+Juniperus.communis,heath
+Knautia.arvensis,pasture
+Krascheninnikovia.ceratoides,NA
+Lamiaceae,NA
+Larix,deciduous woodland
+Lathyrus,pasture
+Lemna,water
+Lentibulariaceae,wet meadow
+Liliaceae,NA
+Limosella.aquatica,water
+Lingulodinium.machaerophorum,water
+Linnaea.borealis,coniferous woodland
+Linum.usitatissimum,arable
+Listera,NA
+Lobelia.dortmanna,water
+Lonicera,NA
+Lonicera.periclymenum,deciduous woodland
+Lonicera.xylosteum,NA
+Lotus,wet meadow
+Lotus.corniculatus,heath
+Lotus.pedunculatus,wet meadow
+Lycopodiaceae,NA
+Lycopodiella.inundata,water
+Lycopodium,coniferous woodland
+Lycopodium.annotinum,coniferous woodland
+Lycopodium.clavatum,NA
+Lycopsis.arvensis,arable
+Lysimachia,NA
+Lysimachia.vulgaris,wet woodland
+Lythrum,water
+Lythrum.salicaria,water
+Maianthemum,NA
+Malvaceae,NA
+Matteuccia,wet woodland
+Matteuccia.struthiopteris,wet woodland
+meantimes,NA
+Melampyrum,coniferous woodland
+Mentha,NA
+Menyanthes.trifoliata,wet meadow
+Mercurialis,deciduous woodland
+Mercurialis.perennis,deciduous woodland
+Micranthes.nivalis,deciduous woodland
+Micranthes.nivalis.M..tenuis,deciduous woodland
+Micranthes.stellaris,wet meadow
+Monotropa,NA
+Myrica,water
+Myrica.gale,water
+Myricaria,water
+Myricaria.germanica,water
+Myriophyllum,water
+Myriophyllum.alterniflorum,water
+Myriophyllum.spicatum,water
+Myriophyllum.spicatum.M..verticillatum,water
+Myriophyllum.verticillatum,water
+Narthecium.ossifragum,wet meadow
+Nuphar,water
+Nuphar.pumila,water
+Nymphaea,water
+Nymphaea.alba,water
+Nymphaeaceae,water
+Onagraceae,NA
+Onobrychis,pasture
+Ophioglossum,wet meadow
+Ophioglossum.vulgatum,wet meadow
+Orchidaceae,NA
+Osmunda.regalis,water
+Oxalis,NA
+Oxyria,wet meadow
+Oxyria.digyna,wet meadow
+Oxytropis,cliff
+Papaver.radicatum,arable
+Papaver.rhoeas,arable
+Parnassia,wet meadow
+Parnassia.palustris,wet meadow
+Pedicularis,wet meadow
+Pedicularis.palustris,wet meadow
+Persicaria.amphibia,water
+Persicaria.maculosa,arable
+Peucedanum,wet meadow
+Phegopteris.connectilis,wet woodland
+Phragmites,water
+Picea,coniferous woodland
+Picea.abies,coniferous woodland
+Pimpinella,pasture
+Pimpinella.saxifraga,pasture
+Pinguicula,wet meadow
+Pinus,coniferous woodland
+Pinus.sylvestris,coniferous woodland
+Plantago,pasture
+Plantago.coronopus,water
+Plantago.lanceolata,pasture
+Plantago.major,arable
+Plantago.major.P..media,arable
+Plantago.maritima,wet meadow
+Plantago.media,pasture
+Plantago.uniflora,water
+Poaceae,pasture
+Polygala,pasture
+Polygonaceae,NA
+Polygonatum,deciduous woodland
+Polygonatum.verticillatum,deciduous woodland
+Polygonum.aviculare,arable
+Polypodiaceae,NA
+Polypodium,NA
+Polypodium.vulgare,NA
+Polystichum,NA
+Populus,deciduous woodland
+Populus.tremula,deciduous woodland
+Portulaca,ruderal
+Potamogeton,water
+Potentilla,ruderal
+Potentilla.recta,ruderal
+Primula,pasture
+Primula.farinosa,pasture
+Primulaceae,NA
+Prunus,deciduous woodland
+Prunus.padus,deciduous woodland
+Pteridium,NA
+Pteridium.aquilinum,NA
+Quercus,deciduous woodland
+Ranunculaceae,NA
+Ranunculus,pasture
+Ranunculus.acris,pasture
+Ranunculus.glacialis,cliff
+Ranunculus.trichophyllus,water
+Rhamnus,deciduous woodland
+Rhamnus.cathartica,deciduous woodland
+Rhinanthus,pasture
+Rhododendron.tomentosum,wet woodland
+Rhynchospora,wet meadow
+Rhynchospora.alba,wet meadow
+Ribes,NA
+Rosa,NA
+Rosaceae,NA
+Rubiaceae,pasture
+Rubus,wet woodland
+Rubus.chamaemorus,wet woodland
+Rubus.fruticosus,wet woodland
+Rubus.idaeus,wet woodland
+Rubus.saxatilis,wet woodland
+Rumex,arable
+Rumex.acetosa,pasture
+Rumex.acetosa.R..acetosella,pasture
+Rumex.acetosella,pasture
+Rumex.longifolius,arable
+Rumex.Oxyria,arable
+Rumex.Oxyria.digyna,arable
+Sagina,ruderal
+Sagittaria,water
+Salix,wet woodland
+Salix.herbacea,wet woodland
+Salsola.kali,water
+Sambucus,wet woodland
+Sambucus.nigra.S..racemosa,wet woodland
+Sanguisorba,pasture
+Sanguisorba.officinalis,pasture
+Sanicula,deciduous woodland
+Saussurea,wet woodland
+Saussurea.nuda,wet woodland
+Saxifraga,cliff
+Saxifraga.cernua,cliff
+Saxifraga.cernua.S..rivularis,cliff
+Saxifraga.cespitosa,cliff
+Saxifraga.granulata,cliff
+Saxifraga.hirculus,cliff
+Saxifraga.oppositifolia,cliff
+Saxifraga.stellaris,cliff
+Saxifragaceae,cliff
+Scheuchzeria,wet meadow
+Scheuchzeria.palustris,wet meadow
+Schoenoplectus.lacustris,water
+Schoenus,wet meadow
+Scilla,NA
+Scleranthus.annuus,arable
+Scrophularia,NA
+Scrophulariaceae,NA
+Scutellaria,water
+Secale,arable
+Secale.cereale,arable
+Sedum,cliff
+Sedum.acre,cliff
+Selaginella,wet meadow
+Selaginella.selaginoides,wet meadow
+Serratula,pasture
+Sibbaldia,cliff
+Silene,NA
+Silene.acaulis,cliff
+Silene.dioica,wet meadow
+Silene.flos.cuculi,wet meadow
+Silene.viscaria,NA
+Silene.vulgaris,pasture
+Sinapis,arable
+Solanum.dulcamara,water
+Solidago,NA
+Sorbus,deciduous woodland
+Sorbus.aria,deciduous woodland
+Sorbus.aucuparia,deciduous woodland
+Sparganium,water
+Sparganium.emersum,water
+Sparganium.erectum,water
+Spergula,arable
+Spergula.arvensis,arable
+Spergula.Spergularia,arable
+Spergularia,ruderal
+Sphagnum,wet woodland
+Stachys,NA
+Stachys.sylvatica,deciduous woodland
+Stellaria,pasture
+Stuckenia,water
+Succisa,pasture
+Succisa.pratensis,pasture
+Taraxacum,pasture
+Taxus,coniferous woodland
+Taxus.baccata,coniferous woodland
+Tetraedron.minimum,water
+Teucrium,wet meadow
+Thalictrum,pasture
+Thelypteris.palustris,wet meadow
+Tilia,deciduous woodland
+Tilia.cordata,deciduous woodland
+Tofieldia,wet meadow
+Tofieldia.pusilla,wet meadow
+Trapa,water
+Trientalis.europaea,NA
+Trifolium,pasture
+Trifolium.pratense,pasture
+Trifolium.repens,pasture
+Triticum,arable
+Trollius,wet meadow
+Trollius.europaeus,wet meadow
+Typha,water
+Typha.angustifolia,water
+Typha.angustifolia.Sparganium,water
+Typha.latifolia,water
+Typhaceae,water
+Ulmus,deciduous woodland
+Ulmus.glabra,deciduous woodland
+Urtica,pasture
+Utricularia,water
+Vaccinium,coniferous woodland
+Valeriana,wet meadow
+Valeriana.excelsa,wet meadow
+Valeriana.officinalis,wet meadow
+Varia,NA
+Verbascum,ruderal
+Veronica,pasture
+Viburnum,deciduous woodland
+Viburnum.opulus,deciduous woodland
+Vicia,pasture
+Vicia.cracca,pasture
+Vicia.Lathyrus,pasture
+Vicia.sylvatica,pasture
+Viola.palustris,pasture
+Viscum,deciduous woodland
+Viscum.album,deciduous woodland
+Woodsia,cliff
+Xanthium,ruderal
