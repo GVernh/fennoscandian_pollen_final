@@ -1,0 +1,17 @@
+# PLOTS nullmodel #
+nullmodelN <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelN.Rdata")
+nullmodelSE <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelSE.Rdata")
+nullmodelSE2 <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelSE2.Rdata")
+nullmodelMW <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelMW.Rdata")
+nullmodelMM <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelMM.Rdata")
+nullmodelSW <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelSW.Rdata")
+nullmodelSM <- readRDS("./Processed_data/Footprint_calibration_results/nullmodelSM.Rdata")
+
+par(mfrow=c(2,3))
+plot(nullmodelN, ylim=c(0,1), main="North")
+plot(nullmodelSE, ylim=c(0,1), main="SouthEast")
+plot(nullmodelMW, ylim=c(0,1), main="MidWest")
+plot(nullmodelMM, ylim=c(0,1), main="MidMid")
+plot(nullmodelSW, ylim=c(0,1), main="SouthWest")
+plot(nullmodelSM, ylim=c(0,1), main="SouthMid")
+par(mfrow=c(1,1))

@@ -1,0 +1,181 @@
+SPD.N <- alldataNs$SPD
+clim.N <- alldataNs$clim
+conNs <- alldataNs$conNs
+decNs <- alldataNs$decNs
+wetwNs <- alldataNs$wetwNs
+wetmNs <- alldataNs$wetmNs
+pasNs <- alldataNs$pasNs
+araNs <- alldataNs$araNs
+heaNs <- alldataNs$heaNs
+
+SPD.SE <- alldataSEs$SPD
+clim.SE <- alldataSEs$clim
+conSEs <- alldataSEs$conSEs
+decSEs <- alldataSEs$decSEs
+wetwSEs <- alldataSEs$wetwSEs
+wetmSEs <- alldataSEs$wetmSEs
+pasSEs <- alldataSEs$pasSEs
+araSEs <- alldataSEs$araSEs
+heaSEs <- alldataSEs$heaSEs
+
+SPD.MW <- alldataMWs$SPD
+clim.MW <- alldataMWs$clim
+conMWs <- alldataMWs$conMWs
+decMWs <- alldataMWs$decMWs
+wetwMWs <- alldataMWs$wetwMWs
+wetmMWs <- alldataMWs$wetmMWs
+pasMWs <- alldataMWs$pasMWs
+araMWs <- alldataMWs$araMWs
+heaMWs <- alldataMWs$heaMWs
+
+SPD.MM <- alldataMMs$SPD
+clim.MM <- alldataMMs$clim
+conMMs <- alldataMMs$conMMs
+decMMs <- alldataMMs$decMMs
+wetwMMs <- alldataMMs$wetwMMs
+wetmMMs <- alldataMMs$wetmMMs
+pasMMs <- alldataMMs$pasMMs
+araMMs <- alldataMMs$araMMs
+heaMMs <- alldataMMs$heaMMs
+
+SPD.SW <- alldataSWs$SPD
+clim.SW <- alldataSWs$clim
+conSWs <- alldataSWs$conSWs
+decSWs <- alldataSWs$decSWs
+wetwSWs <- alldataSWs$wetwSWs
+wetmSWs <- alldataSWs$wetmSWs
+pasSWs <- alldataSWs$pasSWs
+araSWs <- alldataSWs$araSWs
+heaSWs <- alldataSWs$heaSWs
+
+SPD.SM <- alldataSMs$SPD
+clim.SM <- alldataSMs$clim
+conSMs <- alldataSMs$conSMs
+decSMs <- alldataSMs$decSMs
+wetwSMs <- alldataSMs$wetwSMs
+wetmSMs <- alldataSMs$wetmSMs
+pasSMs <- alldataSMs$pasSMs
+araSMs <- alldataSMs$araSMs
+heaSMs <- alldataSMs$heaSMs
+
+# Before farming
+SPD.Nb <- alldataNb$SPD
+clim.Nb <- alldataNb$clim
+conNb <- alldataNb$conNs
+decNb <- alldataNb$decNs
+wetwNb <- alldataNb$wetwNs
+wetmNb <- alldataNb$wetmNs
+pasNb <- alldataNb$pasNs
+araNb <- alldataNb$araNs
+heaNb <- alldataNb$heaNs
+
+SPD.SEb <- alldataSEb$SPD
+clim.SEb <- alldataSEb$clim
+conSEb <- alldataSEb$conSEs
+decSEb <- alldataSEb$decSEs
+wetwSEb <- alldataSEb$wetwSEs
+wetmSEb <- alldataSEb$wetmSEs
+pasSEb <- alldataSEb$pasSEs
+araSEb <- alldataSEb$araSEs
+heaSEb <- alldataSEb$heaSEs
+
+SPD.MWb <- alldataMWb$SPD
+clim.MWb <- alldataMWb$clim
+conMWb <- alldataMWb$conMWs
+decMWb <- alldataMWb$decMWs
+wetwMWb <- alldataMWb$wetwMWs
+wetmMWb <- alldataMWb$wetmMWs
+pasMWb <- alldataMWb$pasMWs
+araMWb <- alldataMWb$araMWs
+heaMWb <- alldataMWb$heaMWs
+
+SPD.MMb <- alldataMMb$SPD
+clim.MMb <- alldataMMb$clim
+conMMb <- alldataMMb$conMMs
+decMMb <- alldataMMb$decMMs
+wetwMMb <- alldataMMb$wetwMMs
+wetmMMb <- alldataMMb$wetmMMs
+pasMMb <- alldataMMb$pasMMs
+araMMb <- alldataMMb$araMMs
+heaMMb <- alldataMMb$heaMMs
+
+SPD.SWb <- alldataSWb$SPD
+clim.SWb <- alldataSWb$clim
+conSWb <- alldataSWb$conSWs
+decSWb <- alldataSWb$decSWs
+wetwSWb <- alldataSWb$wetwSWs
+wetmSWb <- alldataSWb$wetmSWs
+pasSWb <- alldataSWb$pasSWs
+araSWb <- alldataSWb$araSWs
+heaSWb <- alldataSWb$heaSWs
+
+SPD.SMb <- alldataSMb$SPD
+clim.SMb <- alldataSMb$clim
+conSMb <- alldataSMb$conSMs
+decSMb <- alldataSMb$decSMs
+wetwSMb <- alldataSMb$wetwSMs
+wetmSMb <- alldataSMb$wetmSMs
+pasSMb <- alldataSMb$pasSMs
+araSMb <- alldataSMb$araSMs
+heaSMb <- alldataSMb$heaSMs
+
+# After farming
+SPD.Na <- alldataNa$SPD
+clim.Na <- alldataNa$clim
+conNa <- alldataNa$conNs
+decNa <- alldataNa$decNs
+wetwNa <- alldataNa$wetwNs
+wetmNa <- alldataNa$wetmNs
+pasNa <- alldataNa$pasNs
+araNa <- alldataNa$araNs
+heaNa <- alldataNa$heaNs
+
+SPD.SEa <- alldataSEa$SPD
+clim.SEa <- alldataSEa$clim
+conSEa <- alldataSEa$conSEs
+decSEa <- alldataSEa$decSEs
+wetwSEa <- alldataSEa$wetwSEs
+wetmSEa <- alldataSEa$wetmSEs
+pasSEa <- alldataSEa$pasSEs
+araSEa <- alldataSEa$araSEs
+heaSEa <- alldataSEa$heaSEs
+
+SPD.MWa <- alldataMWa$SPD
+clim.MWa <- alldataMWa$clim
+conMWa <- alldataMWa$conMWs
+decMWa <- alldataMWa$decMWs
+wetwMWa <- alldataMWa$wetwMWs
+wetmMWa <- alldataMWa$wetmMWs
+pasMWa <- alldataMWa$pasMWs
+araMWa <- alldataMWa$araMWs
+heaMWa <- alldataMWa$heaMWs
+
+SPD.MMa <- alldataMMa$SPD
+clim.MMa <- alldataMMa$clim
+conMMa <- alldataMMa$conMMs
+decMMa <- alldataMMa$decMMs
+wetwMMa <- alldataMMa$wetwMMs
+wetmMMa <- alldataMMa$wetmMMs
+pasMMa <- alldataMMa$pasMMs
+araMMa <- alldataMMa$araMMs
+heaMMa <- alldataMMa$heaMMs
+
+SPD.SWa <- alldataSWa$SPD
+clim.SWa <- alldataSWa$clim
+conSWa <- alldataSWa$conSWs
+decSWa <- alldataSWa$decSWs
+wetwSWa <- alldataSWa$wetwSWs
+wetmSWa <- alldataSWa$wetmSWs
+pasSWa <- alldataSWa$pasSWs
+araSWa <- alldataSWa$araSWs
+heaSWa <- alldataSWa$heaSWs
+
+SPD.SMa <- alldataSMa$SPD
+clim.SMa <- alldataSMa$clim
+conSMa <- alldataSMa$conSMs
+decSMa <- alldataSMa$decSMs
+wetwSMa <- alldataSMa$wetwSMs
+wetmSMa <- alldataSMa$wetmSMs
+pasSMa <- alldataSMa$pasSMs
+araSMa <- alldataSMa$araSMs
+heaSMa <- alldataSMa$heaSMs
