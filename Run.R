@@ -101,6 +101,7 @@ if (relative_abun==F)
   source("./R_scripts/LCC_count_scripts/11_MCP_Count.R")
   }
   source("./R_scripts/LCC_count_scripts/12_cross_validation_Count.R")
+  source("./R_scripts/LCC_count_scripts/13_commonality_analysis_Count.R")
   source("./R_scripts/LCC_count_scripts/13_grangercausality_Count.R")
   source("./R_scripts/LCC_count_scripts/14_final_plots_Count.R")
 }

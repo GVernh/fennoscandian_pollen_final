@@ -28,7 +28,7 @@ data_names = list.files(path= "./Processed_data/Full_datasets/",
                full.names = T)
 
 data_id = list.files(path= "./Processed_data/Full_datasets/",
-                        pattern = "_abun.csv")
+                        pattern = "_count.csv")
 
 # Set Bayes factor threshold for mcp acceptance
 BF_thresh <- 10

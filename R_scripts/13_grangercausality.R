@@ -1,9 +1,5 @@
 ### Granger causality test ###
 
-# TO DO:
-  # May be able to create a nested loop for each category (before farming, after farming and all data)
-  # Break key words into two parts with LCC as inner loop and area as outer loops (e.g. "con" and "Ns")
-
 
 # Load library ----
 libs <- c("dplyr","vars", "bruceR", "lmtest", "stats", "glm2")

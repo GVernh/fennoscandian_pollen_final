@@ -127,8 +127,8 @@ ggplot(all_data, aes(x=Abun, y=Count, color=Type, shape=Type)) +
 dev.off()
 
 # AFTER FARMING
-granger_abun_after = na.omit(read.csv("./Results/Granger_causality/Granger_results_afterFarming_abun.csv"))
-granger_count_after = na.omit(read.csv("./Results/Granger_causality/Granger_results_afterFarming_count.csv"))
+granger_abun_after = read.csv("./Results/Granger_causality/Granger_results_afterFarming_abun.csv")
+granger_count_after = read.csv("./Results/Granger_causality/Granger_results_afterFarming_count.csv") 
 
 x <- cor.test(granger_abun_after$F, granger_count_after$F)
 y <- cor.test(granger_abun_after$Chisq, granger_count_after$Chisq)

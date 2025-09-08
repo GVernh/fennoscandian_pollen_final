@@ -29,6 +29,9 @@ alldataSMs <- read.csv("./Processed_data/Full_datasets/alldataSMs_count.csv")
 alldataSWs <- read.csv("./Processed_data/Full_datasets/alldataSWs_count.csv")
 
 Cross_val_df <- read.csv("./Results/Cross_validation/Cross_validation_results_count.csv")
+Cross_val_df_before <- read.csv("./Results/Cross_validation/Cross_validation_results_count_before.csv")
+Cross_val_df_after <- read.csv("./Results/Cross_validation/Cross_validation_results_count_after.csv")
+
 
 # Subset: BEFORE THE ONSET OF FARMING -----
 alldataNb <- alldataNs[which(alldataNs$yearsBP >= 2500),]
@@ -265,198 +268,182 @@ rm(results)
 
 ### NORTH ### before 2300 BP (9000 - 2400 BP)
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "conNs")], p=2) 
-y = bruceR::granger_causality(varmodel = vm, var.y = "conNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "conNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conNs"]) 
+y = bruceR::granger_causality(varmodel = vm, var.y = "conNs", var.x = c("SPD", "clim")) # No sig 
 results = as.data.frame(y$result)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "decNs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "decNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decNs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "wetwNs")], p=1)
-y = granger_causality(varmodel = vm, var.y = "wetwNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "wetwNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwNs"])
+y = granger_causality(varmodel = vm, var.y = "wetwNs", var.x = c("SPD", "clim")) # All sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "wetmNs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "wetmNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmNs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "pasNs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "pasNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasNs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "araNs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "araNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araNs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNb[c("SPD", "clim", "heaNs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaNs", var.x = c("SPD", "clim")) # clim
+vm <- vars::VAR(alldataNb[c("SPD", "clim", "heaNs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaNs", var.x = c("SPD", "clim")) # SPD/clim/all sig
 results = rbind(y$result, results)
-custom_commonality_analysis(heaNb, SPD.Nb, clim.Nb, 1)
 
 ### SOUTHEAST ### 4000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "conSEs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "conSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "decSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSEs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(decSEb, SPD.SEb, clim.SEb, 1)
-
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "wetwSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "decSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "wetmSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "wetwSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "pasSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "wetmSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "araSEs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "pasSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEb[c("SPD", "clim", "heaSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "araSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSEs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
+vm <- vars::VAR(alldataSEb[c("SPD", "clim", "heaSEs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSEs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
 
 ### MIDWEST ### 3000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "conMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "conMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conMWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "decMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "decMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decMWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "wetwMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMWs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(wetwMWb, SPD.MWb, clim.MWb, 1)
-
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "wetmMWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMWs", var.x = c("SPD", "clim")) # sig spd
-results = rbind(y$result, results)
-custom_commonality_analysis(wetmMWb, SPD.MWb, clim.MWb, 3)
-
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "pasMWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "wetwMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMWs", var.x = c("SPD", "clim")) # clim sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "araMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "wetmMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMWs", var.x = c("SPD", "clim")) # SPD sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWb[c("SPD", "clim", "heaMWs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaMWs", var.x = c("SPD", "clim")) #clim
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "pasMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasMWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
-custom_commonality_analysis(heaMWb, SPD.MWb, clim.MWb, 2)
+
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "araMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araMWs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMWb[c("SPD", "clim", "heaMWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaMWs", var.x = c("SPD", "clim")) # clim/all sig
+results = rbind(y$result, results)
 
 ### MIDMID ### 3000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "conMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conMMs", var.x = c("SPD", "clim")) #sig all
-results = rbind(y$result, results)
-custom_commonality_analysis(conMMb, SPD.MMb, clim.MMb, 1)
-
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "decMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "conMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conMMs", var.x = c("SPD", "clim")) # SPD/clim/all sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "wetwMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMMs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(wetwMMb, SPD.MMb, clim.MMb, 1)
-
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "wetmMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "decMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decMMs", var.x = c("SPD", "clim")) # SPD sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "pasMMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "wetwMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMMs", var.x = c("SPD", "clim")) # all sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "araMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araMMs", var.x = c("SPD", "clim")) # clim
-results = rbind(y$result, results)
-custom_commonality_analysis(araMMb, SPD.MMb, clim.MMb, 1)
-
-vm <- vars::VAR(alldataMMb[c("SPD", "clim", "heaMMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "wetmMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMMs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "pasMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasMMs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "araMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araMMs", var.x = c("SPD", "clim")) # clim sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMMb[c("SPD", "clim", "heaMMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaMMs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
 
 ### SOUTHWEST ### (6000 BP)
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "conSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSWs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(conSWb, SPD.SWb, clim.SWb, 1)
-
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "decSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSWs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(decSWb, SPD.SWb, clim.SWb, 1)
-
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "wetwSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "conSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSWs", var.x = c("SPD", "clim")) #all sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "wetmSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "decSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "pasSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "wetwSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "araSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "wetmSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWb[c("SPD", "clim", "heaSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "pasSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSWs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "araSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSWs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results) 
+
+vm <- vars::VAR(alldataSWb[c("SPD", "clim", "heaSWs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSWs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
 
 ### SOUTHMID ### (600 BP)
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "conSMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "conSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "conSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSMs", var.x = c("SPD", "clim")) # SPD sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "decSMs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "decSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "decSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSMs", var.x = c("SPD", "clim")) # all sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "wetwSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSMs", var.x = c("SPD", "clim")) #clim
-results = rbind(y$result, results)
-custom_commonality_analysis(wetwSMb, SPD.SMb, clim.SMb, Cross_val_df$Lag[Cross_val_df$LCC== "wetwSMs"])
-
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "wetmSMs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSMs", var.x = c("SPD", "clim")) #spd
-results = rbind(y$result, results)
-custom_commonality_analysis(wetmSMb, SPD.SMb, clim.SMb, 3)
-
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "pasSMs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSMs", var.x = c("SPD", "clim")) #both
-results = rbind(y$result, results)
-custom_commonality_analysis(pasSMb, SPD.SMb, clim.SMb, 3)
-
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "araSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "wetwSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetwSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSMs", var.x = c("SPD", "clim")) # No sig 
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMb[c("SPD", "clim", "heaSMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "wetmSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "wetmSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSMs", var.x = c("SPD", "clim")) # SPD/all sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "pasSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "pasSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSMs", var.x = c("SPD", "clim")) # No sig 
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "araSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "araSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSMs", var.x = c("SPD", "clim")) # all sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSMb[c("SPD", "clim", "heaSMs")], p=Cross_val_df_before$Lag[Cross_val_df_before$LCC== "heaSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSMs", var.x = c("SPD", "clim")) #clim sig
 results = rbind(y$result, results)
 
 write.csv(results, "./Results/Granger_causality/Granger_results_beforeFarming_count.csv", row.names = F)
@@ -466,203 +453,183 @@ rm(results)
 
 ### NORTH ### (2300 - 1400 BP) DATASET TOO SHORT !!!
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "conNs")], p=4) 
-y = bruceR::granger_causality(varmodel = vm, var.y = "conNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "conNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = as.data.frame(y$result)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "decNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "decNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "wetwNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "wetwNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "wetmNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "wetmNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "pasNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "pasNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "araNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "araNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataNa[c("SPD", "clim", "heaNs")], p=4)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaNs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataNa[c("SPD", "clim", "heaNs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaNs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaNs", var.x = c("SPD", "clim")) # NOT ENOUGH DATA
 results = rbind(y$result, results)
 
 ### SOUTHEAST ### 4000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "conSEs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSEs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(conSEa, SPD.SEa, clim.SEa, 3)
-
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "decSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "conSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSEs", var.x = c("SPD", "clim")) # clim sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "wetwSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "decSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSEs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "wetmSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "wetwSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSEs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "pasSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSEs", var.x = c("SPD", "clim"))
-results = rbind(y$result, results)
-custom_commonality_analysis(pasSEa, SPD.SEa, clim.SEa, 1)
-
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "araSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "wetmSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSEs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSEa[c("SPD", "clim", "heaSEs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSEs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "pasSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSEs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
-custom_commonality_analysis(pasSEa, SPD.SEa, clim.SEa, 1)
 
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "araSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSEs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSEa[c("SPD", "clim", "heaSEs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaSEs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSEs", var.x = c("SPD", "clim")) # SPD/all sig
+results = rbind(y$result, results)
 
 ### MIDWEST ### 3000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "conMWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "conMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conMWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "decMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decMWs", var.x = c("SPD", "clim")) #spd
-results = rbind(y$result, results)
-custom_commonality_analysis(decMWa, SPD.MWa, clim.MWa, 1)
-
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "wetwMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMWs", var.x = c("SPD", "clim")) #sig spd
-results = rbind(y$result, results)
-custom_commonality_analysis(wetwMWa, SPD.MWa, clim.MWa, 1)
-
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "wetmMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMWs", var.x = c("SPD", "clim")) # sig all
-results = rbind(y$result, results)
-custom_commonality_analysis(wetmMWa, SPD.MWa, clim.MWa, 1) 
-
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "pasMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "decMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decMWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "araMWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araMWs", var.x = c("SPD", "clim")) #sig spd
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "wetwMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
-custom_commonality_analysis(araMWa, SPD.MWa, clim.MWa, 1)
 
-vm <- vars::VAR(alldataMWa[c("SPD", "clim", "heaMWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaMWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "wetmMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMWs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "pasMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasMWs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "araMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araMWs", var.x = c("SPD", "clim")) # SPD sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataMWa[c("SPD", "clim", "heaMWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaMWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaMWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
 ### MIDMID ### 3000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "conMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conMMs", var.x = c("SPD", "clim")) #clim
-results = rbind(y$result, results)
-custom_commonality_analysis(conMMa, SPD.MMa, clim.MMa, 1)
-
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "decMMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "conMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conMMs", var.x = c("SPD", "clim")) # clim sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "wetwMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "decMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decMMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "wetmMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "wetwMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwMMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "pasMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasMMs", var.x = c("SPD", "clim")) #sig spd
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "wetmMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmMMs", var.x = c("SPD", "clim")) # SPD sig
 results = rbind(y$result, results)
-custom_commonality_analysis(pasMMa, SPD.MMa, clim.MMa, 1)
 
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "araMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araMMs", var.x = c("SPD", "clim")) #sig spd
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "pasMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasMMs", var.x = c("SPD", "clim")) # SPD/all sig
 results = rbind(y$result, results)
-custom_commonality_analysis(araMMa, SPD.MMa, clim.MMa, 1)
 
-vm <- vars::VAR(alldataMMa[c("SPD", "clim", "heaMMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaMMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "araMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araMMs", var.x = c("SPD", "clim")) # SPD/all sig
 results = rbind(y$result, results)
-custom_commonality_analysis(heaMMa, SPD.MMa, clim.MMa, 1)
 
+vm <- vars::VAR(alldataMMa[c("SPD", "clim", "heaMMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaMMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaMMs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
 
 ### SOUTHWEST ### 6000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "conSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "conSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "decSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSWs", var.x = c("SPD", "clim")) #sig spd
-results = rbind(y$result, results)
-custom_commonality_analysis(decSWa, SPD.SWa, clim.SWa, 1)
-
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "wetwSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSWs", var.x = c("SPD", "clim")) #sig spd
-results = rbind(y$result, results)
-custom_commonality_analysis(wetwSWa, SPD.SWa, clim.SWa, 1)
-
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "wetmSWs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSWs", var.x = c("SPD", "clim")) #all
-results = rbind(y$result, results)
-custom_commonality_analysis(wetmSWa, SPD.SWa, clim.SWa, 1)
-
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "pasSWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSWs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "decSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSWs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "araSWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSWs", var.x = c("SPD", "clim")) #
-results = rbind(y$result, results)
-custom_commonality_analysis(heaSWa, SPD.SWa, clim.SWa, 3)
-
-vm <- vars::VAR(alldataSWa[c("SPD", "clim", "heaSWs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSWs", var.x = c("SPD", "clim")) #sig all
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "wetwSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSWs", var.x = c("SPD", "clim")) # SPD/all sig
 results = rbind(y$result, results)
 
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "wetmSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSWs", var.x = c("SPD", "clim")) # clim/all sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "pasSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSWs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "araSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSWs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSWa[c("SPD", "clim", "heaSWs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaSWs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSWs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
 
 ### SOUTHMID ### 6000 BP
 #-------------------------------------------------------------------------------
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "conSMs")], p=3)
-y = bruceR::granger_causality(varmodel = vm, var.y = "conSMs", var.x = c("SPD", "clim")) #sig spd
-results = rbind(y$result, results)
-custom_commonality_analysis(conSMa, SPD.SMa, clim.SMa, 3)
-
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "decSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "decSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "conSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "conSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "conSMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "wetwSMs")], p=1)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSMs", var.x = c("SPD", "clim")) #clim
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "decSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "decSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "decSMs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "wetwSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetwSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetwSMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 custom_commonality_analysis(wetwSMa, SPD.SMa, clim.SMa, 1)
 
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "wetmSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "wetmSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "wetmSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "wetmSMs", var.x = c("SPD", "clim")) # SPD sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "pasSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "pasSMs", var.x = c("SPD", "clim")) #clim
-results = rbind(y$result, results)
-custom_commonality_analysis(pasSMa, SPD.SMa, clim.SMa, 2)
-
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "araSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "araSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "pasSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "pasSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "pasSMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
-vm <- vars::VAR(alldataSMa[c("SPD", "clim", "heaSMs")], p=2)
-y = bruceR::granger_causality(varmodel = vm, var.y = "heaSMs", var.x = c("SPD", "clim"))
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "araSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "araSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "araSMs", var.x = c("SPD", "clim")) # no sig
+results = rbind(y$result, results)
+
+vm <- vars::VAR(alldataSMa[c("SPD", "clim", "heaSMs")], p=Cross_val_df_after$Lag[Cross_val_df_after$LCC== "heaSMs"])
+y = bruceR::granger_causality(varmodel = vm, var.y = "heaSMs", var.x = c("SPD", "clim")) # no sig
 results = rbind(y$result, results)
 
 write.csv(results, "./Results/Granger_causality/Granger_results_afterFarming_count.csv", row.names = F)

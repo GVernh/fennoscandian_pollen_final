@@ -1,0 +1,10 @@
+Subset,Variable,Coniferous woodland,Deciduous woodland,Wet woodland,Wet meadow,Pasture,Arable land,Heath,All
+Entire dataset,SPD,0,2,0,0,4,3,1,10
+Entire dataset,Climate,1,1,0,1,0,0,0,3
+Entire dataset,Both,1,2,0,1,4,3,2,13
+Before farming,SPD,2,1,1,2,0,0,1,7
+Before farming,Climate,1,0,1,0,0,1,4,7
+Before farming,Both,2,0,3,0,0,0,2,7
+After farming,SPD,0,0,2,3,2,3,1,11
+After farming,Climate,1,0,0,2,1,0,0,4
+After farming,Both,0,0,1,2,2,2,2,4
