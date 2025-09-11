@@ -1,0 +1,27 @@
+"","Region","LCC","Causality","F","P","R2"
+"1","Central","Arable","SPD",3.863,0.01,17.511
+"2","Central","Arable","SPD|clim",2.656,0.01,1.252
+"3","Central","Deciduous woodland","SPD",3.382,0.01,20.229
+"4","Central","Deciduous woodland","SPD|clim",2.06,0.04,-7.807
+"5","Central","Heathland","SPD|clim",2.065,0.05,3.313
+"6","Central","Pasture","SPD",4.57,0.01,15.056
+"7","Central","Pasture","SPD|clim",3.343,0.01,2.655
+"8","Midwest","Arable","SPD|clim",3.104,0.05,2.792
+"9","Midwest","Pasture","SPD",5.208,0,16.617
+"10","Midwest","Pasture","SPD|clim",3.839,0,0.737
+"11","Southeast","Coniferous woodland","clim",8.286,0.01,9.28
+"12","Southeast","Coniferous woodland","SPD|clim",4.146,0.02,-0.573
+"13","Southeast","Heathland","SPD",19.145,0,19.093
+"14","Southeast","Heathland","SPD|clim",9.636,0,0.127
+"15","Southeast","Pasture","SPD",7.679,0.01,8.409
+"16","Southeast","Pasture","SPD|clim",5.163,0.01,2.535
+"17","Southeast","Wet meadow","clim",4.416,0.04,4.972
+"18","Southeast","Wet meadow","SPD|clim",3.905,0.02,2.258
+"19","Southmid","Arable","SPD",2.805,0.05,11.458
+"20","Southmid","Pasture","SPD",5.671,0.02,6.229
+"21","Southmid","Pasture","SPD|clim",10.018,0,15.644
+"22","Southwest","Arable","SPD",4.605,0.01,16.038
+"23","Southwest","Arable","SPD|clim",2.522,0.03,0.802
+"24","Southwest","Deciduous woodland","clim",6.81,0.01,7.636
+"25","Southwest","Deciduous woodland","SPD",8.944,0,10.029
+"26","Southwest","Deciduous woodland","SPD|clim",5.089,0.01,-6.251

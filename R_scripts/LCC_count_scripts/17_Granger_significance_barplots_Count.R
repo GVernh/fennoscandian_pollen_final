@@ -18,22 +18,20 @@ invisible(lapply(
 rm(list = ls())
 
 # Load Granger causality results ----
-sig_abun <- read.csv("./Results/Granger_causality/Table_granger_significance_abun.csv")
 
-# Data cleaning ----
-sig_abun = sig_abun %>% pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
-                                            Wet.meadow,Pasture,Arable.land,Heath,All),
-                    names_to='LCC',
-                    values_to='Count') %>%
+sig_count <- read.csv("./Results/Granger_causality/Table_granger_significance_count.csv")
+
+sig_count = sig_count %>% pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
+                                              Wet.meadow,Pasture,Arable.land,Heath,All),
+                                       names_to='LCC',
+                                       values_to='Count') %>%
   mutate(across('Variable', str_replace, 'Both', 'SPD + Climate'))
 
-sig_abun$LCC = gsub(".", " ", sig_abun$LCC, fixed = T)
+sig_count$LCC = gsub(".", " ", sig_count$LCC, fixed = T)
 
-# Barplots ----
+png("./Results/Plots/LCC_count/Granger_significance_bar_count.png", width = 1400, height = 900)
 
-png("./Results/Plots/LCC_abun/Granger_significance_bar_abun.png", width = 1400, height = 900)
-
-ggplot(sig_abun, aes(x = LCC, y = Count, fill = Variable)) +
+ggplot(sig_count, aes(x = LCC, y = Count, fill = Variable)) +
   geom_bar(stat = "identity", position = position_dodge()) +
   facet_wrap(~ Subset) +
   ylab("N. significant models") +

@@ -240,6 +240,8 @@ results = rbind(y$result, results)
 
 write.csv(results, "./Results/Granger_causality/Granger_results_allData_abun.csv", row.names = F)
 rm(results)
+
+
 ### BEFORE THE ONSET OF FARMING #-----------------------------------------------
 
 ### NORTH ### before 2300 BP (9000 - 2400 BP)
