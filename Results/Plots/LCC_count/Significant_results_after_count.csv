@@ -1,4 +1,4 @@
-"","Region","LCC","Causality","F","P","R2"
+"","Region","LCC","Causality","F","P","Coef."
 "1","Central","Arable","SPD",7.381,0.01,44.024
 "2","Central","Arable","SPD|clim",4.018,0.03,15.574
 "3","Central","Coniferous woodland","clim",7.228,0.01,9.329

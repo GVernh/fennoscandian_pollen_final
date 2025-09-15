@@ -28,7 +28,7 @@ North_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "North")
 
@@ -38,7 +38,7 @@ Central_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "Central")
 
@@ -48,7 +48,7 @@ Midwest_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "Midwest")
 
@@ -58,7 +58,7 @@ Southeast_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "Southeast")
 
@@ -68,7 +68,7 @@ Southmid_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "Southmid")
 
@@ -79,7 +79,7 @@ Southwest_com_long <- data %>%
   pivot_longer(cols=c(Coniferous.woodland,Deciduous.woodland,Wet.woodland,
                       Wet.meadow,Pasture,Arable.land,Heath),
                names_to='LCC',
-               values_to='R2') %>%
+               values_to='Coef.') %>%
   rename(Variable = "X") %>%
   mutate(Region = "Southwest")
 
