@@ -84,6 +84,7 @@ source("./R_scripts/8_all_lat_long_grids.R")
 if (relative_abun==T)
   {
 source("./R_scripts/9_LCC.R")
+source("./R_scripts/9.5_data_cleaning_merge.R")
 source("./R_scripts/10_smoothing.R")
   if (mcp == T) {
 source("./R_scripts/11_MCP.R")
@@ -96,6 +97,7 @@ source("./R_scripts/14_final_plots.R")
 if (relative_abun==F)
 {
   source("./R_scripts/LCC_count_scripts/9_LCC_Count.R")
+  source("./R_scripts/LCC_count_scripts/9.5_data_cleaning_merge.R")
   source("./R_scripts/LCC_count_scripts/10_smoothing_Count.R")
     if (mcp == T) {
   source("./R_scripts/LCC_count_scripts/11_MCP_Count.R")
