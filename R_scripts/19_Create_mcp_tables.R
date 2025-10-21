@@ -54,7 +54,7 @@ comp_df <- rlist::list.rbind(df_list)
 
 comp_df <- comp_df %>%
   dplyr::mutate(Region = recode(Region, "MM" = "Central", "MW" = "Midwest", "N" = "North", "SM" = "Southmid",
-                                "SW" = "Southwest"))
+                                "SW" = "Southwest", "SE" = "Southeast"))
 
 write.csv(comp_df, "./Results/Plots/LCC_abun/Selected_MCP_table.csv", row.names = F)
 
