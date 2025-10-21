@@ -12,7 +12,7 @@ libs <- c("dplyr","ggplot2", "remotes", "stringr","tidyr","rnaturalearth", "rcar
           "sf", "rnaturalearthdata", "Bchron", "stats", "zoo", "graphics", "remotes",
           "ggspatial", "magrittr", "ecp", "mcp", "ggpubr", "purrr","lubridate", "fpp2", 
           "smooth", "TTR", "vars","modelr", "glm2", "timetk", "bruceR", 
-          "lmtest", "scales")
+          "lmtest", "scales", "rlist")
 
 installed_libs <- libs %in% rownames(
   installed.packages())

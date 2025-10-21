@@ -990,12 +990,12 @@ wetmSM <- data.frame(age=alldataSMs$yearsBP, LCC=alldataSMs$wetmSMs)
 SM6 <- ggplot(wetmSM, aes(x=age))+
   scale_colour_manual(values=c(blueviolet="blueviolet",black="black",hotpink="hotpink")) +
   geom_line(aes(y=LCC), color="blueviolet", size=1.3)+
-  geom_vline(aes(xintercept = wetw_mcp_SM[[1,3]], color = "black"), size = BF_50, linetype = line_type) +
-  geom_vline(aes(xintercept = wetw_mcp_SM[[2,3]], color = "black"), size = BF_50, linetype = line_type) +
-  geom_vline(aes(xintercept = wetw_mcp_SM[[3,3]], color = "black"), size = BF_10, linetype = line_type) +
-  geom_rect(aes(xmin=wetw_mcp_SM[[1,4]], xmax=wetw_mcp_SM[[1,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
-  geom_rect(aes(xmin=wetw_mcp_SM[[2,4]], xmax=wetw_mcp_SM[[2,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
-  geom_rect(aes(xmin=wetw_mcp_SM[[3,4]], xmax=wetw_mcp_SM[[3,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
+  geom_vline(aes(xintercept = wetm_mcp_SM[[1,3]], color = "black"), size = BF_50, linetype = line_type) +
+  geom_vline(aes(xintercept = wetm_mcp_SM[[2,3]], color = "black"), size = BF_50, linetype = line_type) +
+  geom_vline(aes(xintercept = wetm_mcp_SM[[3,3]], color = "black"), size = BF_10, linetype = line_type) +
+  geom_rect(aes(xmin=wetm_mcp_SM[[1,4]], xmax=wetm_mcp_SM[[1,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
+  geom_rect(aes(xmin=wetm_mcp_SM[[2,4]], xmax=wetm_mcp_SM[[2,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
+  geom_rect(aes(xmin=wetm_mcp_SM[[3,4]], xmax=wetm_mcp_SM[[3,5]], ymin=-Inf, ymax=Inf), alpha=0.005, fill = "blueviolet") +
   geom_vline(aes(xintercept = 6000, color = "hotpink"), size=1) +
   scale_x_reverse(breaks = c(9000,8000,7000, 6000,5000,4000, 3000,2000,1000))+
   labs(title="(F) WET MEADOW", x="years BP", y="relative pollen abundance") +
