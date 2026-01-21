@@ -4,7 +4,7 @@
 relative_abun = T
 
 #### Please specify if new multiple change points should be created.
-# WARNIGN: If set to TRUE, this will dramatically increase computational requirments.
+# WARNING: If set to TRUE, this will dramatically increase computational requirements.
 mcp_proc = F
 #################
 

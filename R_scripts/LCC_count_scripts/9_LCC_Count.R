@@ -1,6 +1,4 @@
 ### LCC's ###
-rm(list=ls())
-
 libs <- c("dplyr","magrittr")
 
 installed_libs <- libs %in% rownames(

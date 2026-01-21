@@ -25,66 +25,9 @@ after_data <- read.csv("./Results/Plots/LCC_abun/Significant_results_after_abun.
 
 
 combined_data <- rbind(after_data, before_data, all_data) %>%
-  select(-X)
+  dplyr::select(-X)
 
 write.csv(combined_data, "./Results/Plots/LCC_abun/Significant_results_combined.csv", row.names = F)
-
-
-
-# Load data
-df <- read_csv("./Results/Plots/LCC_abun/Significant_results_combined.csv")
-
-df$data <- factor(
-  df$data,
-  levels = c("All", "Before", "After"),
-  labels = c("All data", "Before farming", "After farming")
-)
-
-# 
-# Summarize: mean + SD of Coef. by data & LCC
-df_sum <- df %>%
-  group_by(data, LCC) %>%
-  summarise(
-    mean_coef = mean(Coef., na.rm = TRUE),
-    sd_coef   = sd(Coef., na.rm = TRUE),
-    .groups = "drop"
-  )
-
-plot <- ggplot(df_sum, aes(x = LCC, y = mean_coef)) +
-  geom_point(size = 3, color = "black") +
-  geom_errorbar(aes(ymin = mean_coef - sd_coef,
-                    ymax = mean_coef + sd_coef),
-                width = 0.15, color = "black") +
-  facet_wrap(~ data, scales = "free_x", nrow = 1) +
-  scale_y_continuous(
-    labels = function(x) paste0(x, ""),
-    expand = expansion(mult = c(0.05, 0.1))
-  ) +
-  theme_minimal(base_size = 14) +
-  theme(
-    axis.text.x = element_text(angle = 40, hjust = 1),
-    strip.background = element_blank(),
-    strip.text = element_text(size = 14, face = "bold"),
-    panel.border = element_rect(color = "grey60", fill = NA),
-    panel.grid.minor = element_blank()
-  ) +
-  geom_hline(yintercept = 0, linetype = "dashed", color = "grey50") +
-  labs(
-    x = "LCC",
-    y = "Commonality coefficient (± SD, %)",
-  ) +
-  
-
-
-# Save plot
-ggsave(
-  filename = "./Results/Plots/LCC_abun/dot_whisker_comm_coef.png",
-  plot     = plot,
-  width    = 10,       # inches (adjust as needed)
-  height   = 7,        # inches (adjust as needed)
-  dpi      = 300       # 300 = standard high-res, 600 = ultra-print quality
-)
-
 
 # Grouped by LCC & causality
 df <- read_csv("./Results/Plots/LCC_abun/Significant_results_combined.csv")
