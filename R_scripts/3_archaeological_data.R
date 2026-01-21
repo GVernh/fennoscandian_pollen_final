@@ -18,7 +18,7 @@ invisible(lapply(
   library,
   character.only = T
 ))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 dir.create(file.path("./Processed_data/", "archeological_data"), showWarnings = FALSE)
 
@@ -26,7 +26,7 @@ dir.create(file.path("./Processed_data/", "archeological_data"), showWarnings = 
 world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
 
 # Load Human footprint data
-footprint <- p3k14c <- read.csv("./Raw_Data/p3k14c_original.csv")
+footprint <- p3k14c <- read.csv("./Raw_Data/p3k14c_original.csv/p3k14c_original.csv")
 
 ### DATA WRANGLING ###
 footprint <- footprint %>% subset(Long >= 4 & Long < 42) %>% 

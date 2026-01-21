@@ -18,7 +18,7 @@ invisible(lapply(
   library,
   character.only = T
 ))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 if (!(paste0("p3k14c_original.csv") %in% list.files("./Raw_Data/"))) {
 zipF<- "./Raw_Data/p3k14c_original.csv.zip"

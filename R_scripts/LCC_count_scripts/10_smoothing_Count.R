@@ -16,7 +16,7 @@ invisible(lapply(
   library,
   character.only = T
 ))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 #library(RRatepol)
 

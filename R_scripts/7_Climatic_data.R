@@ -26,7 +26,7 @@ if (lipdR_check == F) {
   remotes::install_github("nickmckay/lipdR")
 }
 invisible(library(lipdR))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 if (!(paste0("Temp12k_v1_0_0.RData") %in% list.files("./Raw_Data/"))){
   zipF<- "./Raw_Data/Temp12k_v1_0_0.RData.zip"
@@ -35,7 +35,7 @@ if (!(paste0("Temp12k_v1_0_0.RData") %in% list.files("./Raw_Data/"))){
 }
 
 ### Load Data ### ----
-load("./Raw_Data/Temp12k_v1_0_0.RData")
+load("./Raw_Data/Temp12k_v1_0_0.RData/Temp12k_v1_0_0.RData")
 climate = TS
 world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
 

@@ -5,7 +5,7 @@ relative_abun = T
 
 #### Please specify if new multiple change points should be created.
 # WARNIGN: If set to TRUE, this will dramatically increase computational requirments.
-mcp = F
+mcp_proc = F
 #################
 
 libs <- c("dplyr","ggplot2", "remotes", "stringr","tidyr","rnaturalearth", "rcarbon",
@@ -36,7 +36,7 @@ if (lipdR_check == F) {
   remotes::install_github("nickmckay/lipdR")
 }
 invisible(library(lipdR))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 dir.create(file.path("./", "Processed_data"), showWarnings = FALSE)
 dir.create(file.path("./Processed_data/", "Pollen_data"), showWarnings = FALSE)
@@ -86,7 +86,7 @@ if (relative_abun==T)
 source("./R_scripts/9_LCC.R")
 source("./R_scripts/9.5_data_cleaning_merge.R")
 source("./R_scripts/10_smoothing.R")
-  if (mcp == T) {
+  if (mcp_proc == T) {
 source("./R_scripts/11_MCP.R")
   }
 source("./R_scripts/12_cross_validation.R")
@@ -104,7 +104,7 @@ if (relative_abun==F)
   source("./R_scripts/LCC_count_scripts/9_LCC_Count.R")
   source("./R_scripts/LCC_count_scripts/9.5_data_cleaning_merge.R")
   source("./R_scripts/LCC_count_scripts/10_smoothing_Count.R")
-    if (mcp == T) {
+    if (mcp_proc == T) {
   source("./R_scripts/LCC_count_scripts/11_MCP_Count.R")
   }
   source("./R_scripts/LCC_count_scripts/12_cross_validation_Count.R")

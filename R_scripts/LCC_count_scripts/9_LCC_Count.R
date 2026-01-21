@@ -17,7 +17,7 @@ invisible(lapply(
   library,
   character.only = T
 ))
-rm(list = setdiff(ls(), "relative_abun"))
+rm(list = setdiff(ls(), c("relative_abun", "mcp_proc")))
 
 dir.create(file.path("./Processed_data/LCC_data/", "LCC_count"), showWarnings = FALSE)
 
