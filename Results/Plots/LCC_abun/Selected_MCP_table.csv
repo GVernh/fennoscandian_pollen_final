@@ -1,0 +1,101 @@
+"Region","Dataset","Mean","Lower","Upper","BF"
+"Central","SPD",1244.7,1200,1300,27.5
+"Central","SPD",1351.2,1303.8,1399.6,109.7
+"Central","SPD",1560.4,1501.3,1599.7,455.1
+"Central","SPD",2855.9,2700,3069,124.7
+"Central","Climate",7984.8,7799.7,8238.5,44.4
+"Central","Coniferous woodland",5695.1,4000,7653.6,15.4
+"Central","Wet meadow",5678.7,5500,5898.2,39.4
+"Central","Wet meadow",7494.1,7396.5,7699.9,28.9
+"Central","Arable",796.8,700.6,890.2,13.7
+"Central","Arable",1896.5,1700.6,2000,19.7
+"Central","Arable",3771.3,3700,3877.2,39
+"Central","Arable",5058.4,5000,5154,55.5
+"Central","Arable",5949.2,5900,5995.3,69.9
+"Central","Heath",854.3,800,964,20.6
+"Midwest","SPD",750.4,705,799.9,39.4
+"Midwest","SPD",850.4,804.7,899.6,461.8
+"Midwest","SPD",1697.7,1600,1810.3,183.7
+"Midwest","SPD",2849.6,2800,2895.5,276.8
+"Midwest","Climate",7991.7,7762.9,8395.6,43.5
+"Midwest","Coniferous woodland",2828.7,2172.9,3000,10.9
+"Midwest","Coniferous woodland",7335.9,7020.8,7499.9,26.2
+"Midwest","Dedicduous woodland",2961,2900,3057.9,51.6
+"Midwest","Dedicduous woodland",4033.4,3900,4199.8,41.6
+"Midwest","Dedicduous woodland",6455,6401.2,6500,63.5
+"Midwest","Wet woodland",4040,3922,4100,48.9
+"Midwest","Wet woodland",6029.5,5924,6100,53.9
+"Midwest","Wet woodland",7950.4,7904.4,8000,48
+"Midwest","Wet meadow",2148.7,2100.3,2199.2,32.6
+"Midwest","Wet meadow",3336.5,3200,3473.2,24.5
+"Midwest","Wet meadow",4139,4000,4281.9,28.7
+"Midwest","Wet meadow",6249.6,6200.1,6298.2,65
+"Midwest","Pasture",850.1,801.6,897.2,22.6
+"Midwest","Pasture",1336.8,1258.7,1400,68.1
+"Midwest","Arable",3937.3,3625.6,4200,40.3
+"Midwest","Heath",1788.2,1600,1950.5,11.7
+"Midwest","Heath",2909.9,2809.1,3000,29.5
+"Midwest","Heath",3989.3,3900,4147.3,53.8
+"Midwest","Heath",8367.5,8239.7,8500,22.7
+"North","SPD",3929.1,3400,6346.9,10.8
+"North","Climate",5787.5,5566.4,6100,20.2
+"North","Climate",7982.3,7748.4,8243.9,41.5
+"North","Coniferous woodland",7102.1,6900,7564.5,12.4
+"North","Dedicduous woodland",7028.2,6800,7281.8,12.9
+"North","Wet woodland",7972.1,7900,8138.9,54.5
+"North","Wet woodland",8154.3,7985.9,8535.8,23.8
+"North","Wet meadow",7692.8,6800.1,8879.8,13.8
+"North","Pasture",1650.5,1604.9,1699.9,20.4
+"North","Pasture",4104.1,3682.4,4387.2,22.2
+"North","Pasture",5861.7,5700,5972.6,55.5
+"North","Pasture",6907.1,6807.9,6999.9,33
+"North","Arable",1449.6,1400.1,1495,26.6
+"North","Arable",1767.8,1488.5,1900,12.8
+"North","Arable",2049.8,1800,2385.9,21.5
+"North","Arable",2408.7,1877.2,2700,57.6
+"North","Arable",2887.7,2400,5556.5,11.6
+"North","Heath",1650.5,1604.6,1699.8,20.4
+"North","Heath",3750.7,3699.8,3897.5,35.3
+"North","Heath",6830.4,6528.8,7000,10.6
+"North","Heath",7528.1,7200.5,7761.6,14.8
+"SE","Climate",2669.4,1246,6200,20.6
+"SE","Wet meadow",1212.5,1102.1,1300,16.2
+"SE","Wet meadow",8024.7,7804.8,8200,22
+"SE","Pasture",1317.9,1079,1500,23.1
+"SE","Pasture",8854.6,8802.1,8900,19.5
+"SE","Arable",650.3,604.7,699.6,23.2
+"SE","Arable",750.3,705,799.9,192.8
+"SE","Arable",850.3,803.9,898.9,1408.1
+"SE","Arable",950.3,903.3,998.3,9417.6
+"SE","Arable",1356.6,1300,1418.4,13559.9
+"SE","Heath",1250,1201.8,1296.8,38
+"SE","Heath",2999.4,2400,3852.5,19.3
+"Southmid","SPD",2387.2,2100,3439.3,20.5
+"Southmid","SPD",5920.2,5600,6144,14.1
+"Southmid","Coniferous woodland",7572,7407.7,7700,18.1
+"Southmid","Coniferous woodland",8368.6,8300,8543.5,34.4
+"Southmid","Dedicduous woodland",1858.9,1600.3,2023.6,22.5
+"Southmid","Wet woodland",1778.7,1700,1886.6,14.5
+"Southmid","Wet woodland",3447.9,1796.7,5299.8,17.4
+"Southmid","Wet woodland",8840.3,8312.3,9000,10.3
+"Southmid","Wet meadow",6850,6803.9,6898.8,83.8
+"Southmid","Wet meadow",7450.3,7404.4,7499.3,62.6
+"Southmid","Wet meadow",8749.6,8700.2,8795.1,23.3
+"Southmid","Pasture",1550.3,1504.5,1599.9,20.5
+"Southmid","Pasture",2954.4,2900.6,2999.4,34.2
+"Southmid","Pasture",4071.4,3700,4511,25.8
+"Southmid","Arable",1551.2,1505.4,1600,20.6
+"Southmid","Arable",4315.6,4200,4433.2,49.3
+"Southmid","Heath",5592,3900.3,7138.9,10.9
+"Southwest","SPD",775.7,700,880.7,20.5
+"Southwest","SPD",1078.7,900,1382.7,22.2
+"Southwest","SPD",1466.8,1300,1781.4,27.4
+"Southwest","Coniferous woodland",859.3,799.9,920.2,21.2
+"Southwest","Coniferous woodland",1511.2,856.4,1664.7,51.8
+"Southwest","Coniferous woodland",7717,7514.8,7800,11.9
+"Southwest","Wet meadow",1499.6,1313.6,1600,14.7
+"Southwest","Wet meadow",1916.5,1811.7,2000,65.1
+"Southwest","Pasture",1052.6,1001.1,1099.7,27.4
+"Southwest","Pasture",7783.6,6301.1,8110,10.8
+"Southwest","Heath",8297.8,7900,8798.9,16.7
+"Southwest","Heath",8735.3,8600,8843.9,19.8
