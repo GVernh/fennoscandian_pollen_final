@@ -96,6 +96,7 @@ source("./R_scripts/16_Granger_comparison_count_abun.R")
 source("./R_scripts/17_Granger_significance_barplots.R")
 source("./R_scripts/18_Granger_commonality_tables.R")
 source("./R_scripts/19_Create_mcp_tables.R")
+source("./R_scripts/20_Coef_dot_whisker_plots.R")
 }
 
 if (relative_abun==F)
